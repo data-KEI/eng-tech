@@ -27,3 +27,12 @@ There are 4 choices for the alternative python (providing /usr/bin/python).
 Press <enter> to keep the current choice[*], or type selection number: 3
 update-alternatives: using /usr/bin/python3.6 to provide /usr/bin/python (python) in manual mode
 ~~~
+~~~
+$ sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.8 5
+$ sudo update-alternatives --list python
+/usr/bin/python2.7
+/usr/bin/python3.5
+/usr/bin/python3.6
+/usr/bin/python3.7
+/usr/bin/python3.8
+~~~
