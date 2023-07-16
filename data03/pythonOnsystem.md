@@ -53,7 +53,19 @@ $ sudo update-alternatives --list python
 ~~~
 ### 파이썬 3.9 코드컴파일 설치 on Ubuntu 18.04.3 LTS
 ~~~
-sudo apt install build-essential zlib1g-dev \
+$ sudo apt install build-essential zlib1g-dev \
 libncurses5-dev libgdbm-dev libnss3-dev \
 libssl-dev libreadline-dev libffi-dev curl software-properties-common
+$ wget https://www.python.org/ftp/python/3.9.0/Python-3.9.0.tar.xz
+$ tar -xf Python-3.9.0.tar.xz
+$ cd Python-3.9.0/
+$ sudo make altinstall
+$ sudo update-alternatives --install /usr/bin/python python /usr/local/bin/python3.9 6
+$ sudo update-alternatives --list python
+/usr/bin/python2.7
+/usr/bin/python3.5
+/usr/bin/python3.6
+/usr/bin/python3.7
+/usr/bin/python3.8
+/usr/local/bin/python3.9
 ~~~
