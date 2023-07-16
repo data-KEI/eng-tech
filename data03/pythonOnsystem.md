@@ -51,3 +51,9 @@ $ sudo update-alternatives --list python
 /usr/bin/python3.7
 /usr/bin/python3.8
 ~~~
+### 파이썬 3.9 코드컴파일 설치 on Ubuntu 18.04.3 LTS
+~~~
+sudo apt install build-essential zlib1g-dev \
+libncurses5-dev libgdbm-dev libnss3-dev \
+libssl-dev libreadline-dev libffi-dev curl software-properties-common
+~~~
