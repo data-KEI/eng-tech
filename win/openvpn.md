@@ -35,3 +35,4 @@
 
 * - 관리 포트 제외입니다.
 ~~~
+- [참고](https://superuser.com/questions/1685768/qopenvpn-client-management-socket-bind-failed-on-local-address-af-inet127)
