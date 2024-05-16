@@ -1,4 +1,28 @@
 ~~~
+$ sudo exportfs -a
+exportfs: /etc/exports [1]: Neither 'subtree_check' or 'no_subtree_check' specified for export "192.168.1.101/255.255.255.0:/media".
+  Assuming default behaviour ('no_subtree_check').
+  NOTE: this default has changed since nfs-utils version 1.0.x
+
+$ sudo systemctl status nfs-kernel-server.service
+● nfs-server.service - NFS server and services
+   Loaded: loaded (/lib/systemd/system/nfs-server.service; enabled; vendor preset: enabled)
+   Active: active (exited) since 목 2024-05-16 16:34:48 KST; 7s ago
+  Process: 5885 ExecStopPost=/usr/sbin/exportfs -f (code=exited, status=0/SUCCESS)
+  Process: 5881 ExecStopPost=/usr/sbin/exportfs -au (code=exited, status=0/SUCCESS)
+  Process: 5877 ExecStop=/usr/sbin/rpc.nfsd 0 (code=exited, status=0/SUCCESS)
+  Process: 5965 ExecStart=/usr/sbin/rpc.nfsd $RPCNFSDARGS (code=exited, status=0/SUCCESS)
+  Process: 5961 ExecStartPre=/usr/sbin/exportfs -r (code=exited, status=0/SUCCESS)
+ Main PID: 5965 (code=exited, status=0/SUCCESS)
+
+ 5월 16 16:34:48 DataLX01 systemd[1]: Starting NFS server and services...
+ 5월 16 16:34:48 DataLX01 exportfs[5961]: exportfs: /etc/exports [1]: Neither 'subtree_check' or 'no_subtree_check' spec
+ 5월 16 16:34:48 DataLX01 exportfs[5961]:   Assuming default behaviour ('no_subtree_check').
+ 5월 16 16:34:48 DataLX01 exportfs[5961]:   NOTE: this default has changed since nfs-utils version 1.0.x
+ 5월 16 16:34:48 DataLX01 rpc.nfsd[5965]: rpc.nfsd: unable to bind inet TCP socket: errno 98 (Address already in use)
+ 5월 16 16:34:48 DataLX01 systemd[1]: Started NFS server and services.
+~~~
+~~~
 $ sudo apt update
 기존:1 http://mirror.kakao.com/ubuntu xenial InRelease
 기존:2 http://mirror.kakao.com/ubuntu xenial-updates InRelease
