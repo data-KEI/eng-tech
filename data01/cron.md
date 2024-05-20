@@ -1,3 +1,8 @@
+### crontab 편집
+- crontab -e  
+- crontab -e -u [계정]  
+
+  
 ### crontab 권한설정
 - vi /etc/cron.d/cron.allow
 ~~~
