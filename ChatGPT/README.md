@@ -1,0 +1,2 @@
+- [모델별 API 사용요금](https://platform.openai.com/settings/organization/limits)  
+- [티어별 월 충전요금](https://platform.openai.com/docs/guides/rate-limits/usage-tiers)  
